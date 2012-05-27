@@ -1,1 +1,0 @@
-/Users/wadahiro/.vim/bundle/vim-pathogen/autoload/pathogen.vim
