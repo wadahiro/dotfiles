@@ -15,11 +15,27 @@ Bundle 'Shougo/unite.vim'
 Bundle 'thinca/vim-ref'
 Bundle 'thinca/vim-quickrun'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'Lokaltog/vim-powerline'
 filetype plugin indent on     " required!
 
 syntax enable
 set background=dark
 colorscheme solarized
+
+  " カーソル行をハイライト
+  set cursorline
+  " カレントウィンドウにのみ罫線を引く
+  augroup cch
+    autocmd! cch
+    autocmd WinLeave * set nocursorline
+    autocmd WinEnter,BufRead * set cursorline
+  augroup END
+
+"Escの2回押しでハイライト消去
+nmap <ESC><ESC> :nohlsearch<CR><ESC>
+
+
+
 
 	" Disable AutoComplPop.
 	let g:acp_enableAtStartup = 0
