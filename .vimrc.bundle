@@ -1,0 +1,23 @@
+set nocompatible
+filetype off
+filetype plugin indent off
+
+if has('vim_starting')
+	set rtp+=~/dotfiles/vimfiles/neobundle.vim.git/
+	call neobundle#rc(expand('~/dotfiles/vimfiles/bundle/'))
+endif
+
+
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimshell'
+NeoBundle 'Shougo/vimproc'
+NeoBundle 'Shougo/vimfiler'
+NeoBundle 'thinca/vim-ref'
+NeoBundle 'thinca/vim-quickrun'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'Lokaltog/vim-powerline'
+
+filetype plugin on
+filetype indent on
+
