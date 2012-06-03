@@ -1,25 +1,6 @@
-set nocompatible
-filetype off
+"neobunlde.vimで管理してるpluginを読み込む
+source ~/dotfiles/_vimrc.bundle
 
-"このif文が必要。
-if has("win32") || has("win64")
-  set rtp+=~/vimfiles/vundle.git/ 
-  call vundle#rc('~/vimfiles/bundle/')
-else
-  set rtp+=~/.vim/vundle.git/ 
-  call vundle#rc()
-endif
-
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/unite.vim'
-Bundle 'Shougo/vimshell'
-Bundle 'Shougo/vimproc'
-Bundle 'Shougo/vimfiler'
-Bundle 'thinca/vim-ref'
-Bundle 'thinca/vim-quickrun'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'Lokaltog/vim-powerline'
-filetype plugin indent on     " required!
 
 syntax enable
 set background=dark
