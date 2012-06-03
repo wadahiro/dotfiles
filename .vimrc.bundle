@@ -3,8 +3,8 @@ filetype off
 filetype plugin indent off
 
 if has('vim_starting')
-	set rtp+=~/dotfiles/vimfiles/neobundle.vim.git/
-	call neobundle#rc(expand('~/dotfiles/vimfiles/bundle/'))
+  set rtp+=~/dotfiles/vimfiles/neobundle.vim.git/
+  call neobundle#rc(expand('~/dotfiles/vimfiles/bundle/'))
 endif
 
 

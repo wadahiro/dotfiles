@@ -1,0 +1,13 @@
+" ========================
+" Search Setting
+" ========================
+
+set wrapscan
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+"Escの2回押しでハイライト消去
+nmap <ESC><ESC> ;nohlsearch<CR><ESC>
+
