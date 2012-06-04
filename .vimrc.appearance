@@ -26,3 +26,6 @@ augroup END
 set lazyredraw
 " 高速ターミナル接続を行う
 set ttyfast
+
+gui
+set transparency=220
