@@ -1,3 +1,2 @@
-
-set background=dark
-colorscheme solarized
+source ~/dotfiles/.vimrc.color
+source ~/dotfiles/.vimrc.appearance

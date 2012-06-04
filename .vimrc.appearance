@@ -5,11 +5,12 @@
 set showmatch
 set number
 set list
-set listchars=tab:»-,trail:-,extends:»,precedes:« " 不可視文字の表示形式
+set listchars=tab:>-,trail:_,extends:<,precedes:< " 不可視文字の表示形式
 set display=uhex      " 印字不可能文字を16進数で表示
+highlight SpecialKey term=underline ctermfg=lightblue guibg=lightblue
 
 " 全角スペースの表示
-highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
+highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=lightblue
 match ZenkakuSpace /　/
 
 set cursorline

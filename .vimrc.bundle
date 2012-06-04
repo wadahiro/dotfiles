@@ -5,6 +5,7 @@ filetype plugin indent off
 if has('vim_starting')
   set rtp+=~/dotfiles/vimfiles/neobundle.vim.git/
   call neobundle#rc(expand('~/dotfiles/vimfiles/bundle/'))
+  let g:neobundle_default_git_protocol = 'https'
 endif
 
 
@@ -20,4 +21,3 @@ NeoBundle 'Lokaltog/vim-powerline'
 
 filetype plugin on
 filetype indent on
-
