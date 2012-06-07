@@ -2,7 +2,8 @@
 " Color Setting
 " ========================
 
-colorscheme solarized
+"colorscheme solarized
+colorscheme desert
 set background=dark
 
 syntax enable

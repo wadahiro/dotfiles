@@ -8,4 +8,5 @@ source ~/dotfiles/.vimrc.search
 source ~/dotfiles/.vimrc.appearance
 source ~/dotfiles/.vimrc.statusline
 source ~/dotfiles/.vimrc.indent
+source ~/dotfiles/.vimrc.unite
 
