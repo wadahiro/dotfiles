@@ -1,0 +1,9 @@
+[url "https://"]
+	insteadOf = git://
+[ghq]
+	root = ~/src
+[user]
+	name = Hiroyuki Wada
+	email = wadahiro@gmail.com
+[core]
+	editor = vim
