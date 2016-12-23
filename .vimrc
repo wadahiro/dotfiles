@@ -102,6 +102,7 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 " UNDOを保存
 set undofile
+set undodir=~/.cache/vim-undo
 
 
 " 数字のインクリメント・デクリメントのマッピングを変更
@@ -124,3 +125,6 @@ let g:EasyMotion_do_mapping = 0
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
+
+
+
