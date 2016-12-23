@@ -1,0 +1,179 @@
+!! ================================================================
+!! Urxvt
+!! ================================================================
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+!-------------------------------------------------------------------------------
+URxvt.geometry:             90x30
+URxvt.fading:               30
+!URxvt.termName:             xterm-256color
+! URxvt.urgentOnBell:       true
+! URxvt.visualBell:         true
+URxvt.loginShell:           true
+URxvt.saveLines:            10000
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+
+! Transparent
+URxvt.depth:                32
+URxvt*background:   rgba:0000/0000/0200/c800
+!URxvt.transparent:          true
+!URxvt*shading: 90
+!URxvt*inheritPixmap: true
+
+
+! Fonts
+URxvt.allow_bold:           true
+URxvt*font: xft:Hack:size=10.5:antialias=true
+
+! Fix font space
+URxvt*letterSpace: -2
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.perl-ext-common:      default,tabbedex,clipboard
+URxvt.matcher.button:       1
+URxvt.url-launcher:         google-chrome-beta
+URxvt.keysym.M-t:           perl:tabbedex:new_tab
+URxvt.keysym.M-n:           perl:tabbedex:next_tab
+URxvt.keysym.M-p:           perl:tabbedex:prev_tab
+URxvt.tabbed.no-tabbedex-keys: true
+URxvt.tabbed.not-consumable-keys: 0xff22, 0xff23, 0xff2a
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+! iso 14755 disable
+URxvt*iso14755: false
+
+! Color
+URxvt*foreground: white
+
+*color0:  #2E3436
+*color1:  #a40000
+*color2:  #4E9A06
+*color3:  #C4A000
+*color4:  #3465A4
+*color5:  #75507B
+*color6:  #ce5c00
+*color7:  #babdb9
+*color8:  #555753
+*color9:  #EF2929
+*color10: #8AE234
+*color11: #FCE94F
+*color12: #729FCF
+*color13: #AD7FA8
+*color14: #fcaf3e
+*color15: #EEEEEC
+
+
+! Molokai
+!!Source https://github.com/brianbuccola/dotfiles/blob/master/xcolors/molokai
+! vim: set ft=xdefaults:
+!URxvt*background:   #000000
+!URxvt*foreground:   #d0d0d0
+!
+!URxvt*cursorColor:  #d0d0d0
+!
+!URxvt*colorBD:      #3579a8
+!URxvt*colorUL:      #4eb4fa
+!
+!!black
+!URxvt*color0:       #000000
+!URxvt*color8:       #1c1c1c
+!
+!!red
+!URxvt*color1:       #960050
+!URxvt*color9:       #ff0090
+!
+!!green
+!URxvt*color2:       #66aa11
+!URxvt*color10:      #80ff00
+!
+!!yellow
+!URxvt*color3:       #c47f2c
+!URxvt*color11:      #ffba68
+!
+!!blue
+!URxvt*color4:       #30309b
+!URxvt*color12:      #5f5fee
+!
+!!magenta
+!URxvt*color5:       #7e40a5
+!URxvt*color13:      #bb88dd
+!
+!!cyan
+!URxvt*color6:       #3579a8
+!URxvt*color14:      #4eb4fa
+!
+!!white
+!URxvt*color7:       #5f5f5f
+!URxvt*color15:      #d0d0d0
+
+
+!! ================================================================
+!! Xterm
+!! ================================================================
+
+!! General
+UXTerm*termName: xterm-256color
+UXTerm*scrollBar: True
+UXTerm*cursorBlink: True
+
+!! Fonts and Encoding
+UXTerm*utf8: True
+UXTerm*locale: True
+UXTerm*utf8Title: True
+! UXTerm*faceName: xft:DejaVu Sans Mono
+! UXTerm*faceName: MigMix 1M
+! UXTerm*faceName: Ricty Diminisheda
+! UXTerm*faceName: Source Han Sans JP
+! UXTerm*faceName: Source Han Code JP
+UXTerm*faceName: Hack
+! UXTerm*faceNameDoublesize: xft:IPAGothic
+! UXTerm*faceNameDoublesize: Ricty
+UXTerm*faceNameDoublesize: Source Han Code JP
+UXTerm*faceSize: 10.5
+! UXTerm*scaleHeight: 1.08
+
+!! Color Scheme : Tomorrow Night
+!! https://github.com/chriskempson/tomorrow-theme
+
+UXTerm*background: #1D1F21
+UXTerm*foreground: #C5C8C6
+! black
+UXTerm*color0: #282A2E
+UXTerm*color8: #373B41
+! red
+UXTerm*color1: #A54242
+UXTerm*color9: #CC6666
+! green
+UXTerm*color2: #8C9440
+UXTerm*color10: #B5BD68
+! yellow
+UXTerm*color3: #DE935F
+UXTerm*color11: #F0C674
+! blue
+UXTerm*color4: #5F819D
+UXTerm*color12: #81A2BE
+! magenta
+UXTerm*color5: #85678F
+UXTerm*color13: #B294BB
+! cyan
+UXTerm*color6: #5E8D87
+UXTerm*color14: #8ABEB7
+! white
+UXTerm*color7: #707880
+UXTerm*color15: #C5C8C6
+
+UXTerm*translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+

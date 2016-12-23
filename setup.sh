@@ -1,5 +1,11 @@
-#!/bin/sh
+#!/bin/bash
 
-ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
-ln -s $HOME/dotfiles/.gvimrc $HOME/.gvimrc
-ln -s $HOME/dotfiles/vimfiles $HOME/.vim
+pwd=`pwd`
+for f in `find . -maxdepth 1 -mindepth 1 | gawk -F/ '{print $NF}'`
+do
+    [ "$f" = ".git" ] && continue
+    [ "$f" = "setup.sh" ] && continue
+
+    #echo $f
+    ln -snfv "$pwd/$f" "$HOME"/"$f"
+done
