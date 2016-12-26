@@ -45,6 +45,8 @@ set autoread
 set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
+set clipboard&
+set clipboard^=unnamedplus
 
 
 " 見た目系
