@@ -16,6 +16,7 @@ fi
 
 alias vi='vim'
 alias sudo='sudo -E'
+alias docker='sudo docker'
 
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
