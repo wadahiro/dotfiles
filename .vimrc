@@ -32,7 +32,7 @@ endif
 
 " プラグイン以外のその他設定が続く
 " :
-
+ 
 "文字コードをUFT-8に設定
 set fenc=utf-8
 " バックアップファイルを作らない
@@ -47,6 +47,7 @@ set hidden
 set showcmd
 set clipboard&
 set clipboard^=unnamedplus
+filetype plugin indent on
 
 
 " 見た目系
@@ -87,6 +88,25 @@ set tabstop=2
 " 行頭でのTab文字の表示幅
 set shiftwidth=2
 
+
+" http://inari.hatenablog.com/entry/2014/05/05/231307
+""""""""""""""""""""""""""""""
+" 全角スペースの表示
+""""""""""""""""""""""""""""""
+function! ZenkakuSpace()
+    highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=darkgray
+endfunction
+
+if has('syntax')
+    augroup ZenkakuSpace
+        autocmd!
+        autocmd ColorScheme * call ZenkakuSpace()
+        autocmd VimEnter,WinEnter,BufRead * let w:m1=matchadd('ZenkakuSpace', '　')
+    augroup END
+    call ZenkakuSpace()
+endif
+
+
 " 検索系
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
 set ignorecase
@@ -100,11 +120,29 @@ set wrapscan
 set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+" 自動的にquickfix-windowを開く
+autocmd QuickFixCmdPost *grep* cwindow
 
 
 " UNDOを保存
 set undofile
 set undodir=~/.cache/vim-undo
+
+
+""""""""""""""""""""""""""""""
+" 最後のカーソル位置を復元する
+""""""""""""""""""""""""""""""
+if has("autocmd")
+    autocmd BufReadPost *
+    \ if line("'\"") > 0 && line ("'\"") <= line("$") |
+    \   exe "normal! g'\"" |
+    \ endif
+endif
+
+
+" Mark
+"nmap <silent> <A-Left> <C-o>
+"nmap <silent> <A-Right> <C-i>
 
 
 " 数字のインクリメント・デクリメントのマッピングを変更
@@ -114,9 +152,17 @@ nnoremap - <C-x>
 " 行末までヤンクをYに設定
 nnoremap Y y$
 
+" 行頭/行末移動
+inoremap <C-e> <Esc>$a
+inoremap <C-a> <Esc>^i
+noremap <C-e> <Esc>$
+noremap <C-a> <Esc>^
 
-nnoremap <silent> gg :call comfortable_motion#flick(-1000)<CR>
-nnoremap <silent> G :call comfortable_motion#flick(1000)<CR>
+" 全選択
+noremap <S-a> <Esc>ggVG
+
+"nnoremap <silent> gg :call comfortable_motion#flick(-1000)<CR>
+"nnoremap <silent> G :call comfortable_motion#flick(1000)<CR>
 "nnoremap <silent> { :call comfortable_motion#flick(-400)<CR>
 "nnoremap <silent> } :call comfortable_motion#flick(400)<CR>
 

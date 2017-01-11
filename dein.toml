@@ -44,4 +44,6 @@ repo = 'Lokaltog/vim-easymotion'
 [[plugins]]
 repo = 'haya14busa/incsearch.vim'
 
+[[plugins]]
+repo = 'tpope/vim-fugitive'
 
