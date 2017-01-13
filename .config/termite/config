@@ -4,7 +4,7 @@ font = Hack 10.5
 
 [colors]
 foreground = white
-background = rgba(0, 0, 0, 0.9)
+background = rgba(0, 0, 0, 0.7)
 color0 =  #2E3436
 color1 =  #a40000
 color2 =  #4E9A06

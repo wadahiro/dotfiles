@@ -158,7 +158,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-	position top
+        position top
         # font pango:DejaVu Sans 14px
         font pango:Hack 14px
 }
@@ -168,7 +168,7 @@ bindsym $mod+p exec ~/bin/rofi_launch.sh
 exec --no-startup-id compton
 exec --no-startup-id fcitx
 exec --no-startup-id copyq
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpapers-archlinux-images-enrique-blue-151552.jpg
+exec --no-startup-id feh --bg-scale -randomize ~/.wallpaper/*
 
 #for_window [window_role="(?i)pop-up"] floating enable
 
