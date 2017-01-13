@@ -24,8 +24,13 @@ hook_add = '''
   let g:airline_theme = 'tender'
 
   " colorscheme 設定は source 後に行う必要があるので VimEnter で行う。
-  " 但し Colorscheme イベントの発生が抑制されないよう nented を付ける。
+  " 但し Colorscheme イベントの発生が抑制されないよう nested を付ける。
   au MyAutoCmd VimEnter * nested colorscheme tender
+
+  " tmux上でのTrue Color対応
+  " see http://qiita.com/yami_beta/items/ef535d3458addd2e8fbb
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 '''
 
 [[plugins]]
