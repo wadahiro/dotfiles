@@ -32,6 +32,48 @@ endif
 
 " プラグイン以外のその他設定が続く
 " :
+
+" colorscheme
+" If you have vim >=8.0 or Neovim >= 0.1.5
+if (has("termguicolors"))
+  set termguicolors
+
+  " tmux上でのTrue Color対応
+  " see http://qiita.com/yami_beta/items/ef535d3458addd2e8fbb
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" set airline theme
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'tender'
+"let g:airline_theme = 'oceanicnext'
+
+" onedark.vim override: Don't set a background color when running in a terminal;
+" just use the terminal's background color
+" `gui` is the hex color code used in GUI mode/nvim true-color mode
+" `cterm` is the color code used in 256-color mode
+" `cterm16` is the color code used in 16-color mode
+if (has("autocmd") && !has("gui"))
+  let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
+  autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " No `bg` setting
+end
+let g:solarized_termtrans=1
+
+" colorscheme 設定は source 後に行う必要があるので VimEnter で行う。
+" 但し Colorscheme イベントの発生が抑制されないよう nested を付ける。
+"au MyAutoCmd VimEnter * nested colorscheme tender
+"colorscheme tender
+"colorscheme OceanicNext
+colorscheme solarized8_dark_low
+"colorscheme onedark
+"autocmd ColorScheme * highlight Normal ctermbg=None
+"autocmd ColorScheme * highlight NonText ctermbg=None
+syntax enable
+
  
 "文字コードをUFT-8に設定
 set fenc=utf-8
@@ -173,6 +215,5 @@ let g:EasyMotion_do_mapping = 0
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
-
 
 
