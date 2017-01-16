@@ -42,3 +42,6 @@ repo = 'christoomey/vim-tmux-navigator'
 [[plugins]]
 repo = 'vim-scripts/diffchar.vim'
 
+[[plugins]]
+repo = 'fatih/vim-go'
+
