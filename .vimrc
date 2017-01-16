@@ -168,6 +168,10 @@ autocmd QuickFixCmdPost *grep* cwindow
 " Mouse
 set mouse=a
 
+" ESC キーを押してから挿入モードを出るまでの時間を短くする
+" timeoutlen ではなく ttimeoutlen の値を小さくする
+set ttimeoutlen=0
+
 " UNDOを保存
 set undofile
 set undodir=~/.cache/vim-undo
