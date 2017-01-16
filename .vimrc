@@ -61,14 +61,14 @@ if (has("autocmd") && !has("gui"))
   let s:white = { "gui": "#ABB2BF", "cterm": "145", "cterm16" : "7" }
   autocmd ColorScheme * call onedark#set_highlight("Normal", { "fg": s:white }) " No `bg` setting
 end
-let g:solarized_termtrans=1
+"let g:solarized_termtrans=1
 
 " colorscheme 設定は source 後に行う必要があるので VimEnter で行う。
 " 但し Colorscheme イベントの発生が抑制されないよう nested を付ける。
 "au MyAutoCmd VimEnter * nested colorscheme tender
 "colorscheme tender
-"colorscheme OceanicNext
-colorscheme solarized8_dark_low
+colorscheme OceanicNext
+"colorscheme solarized8_dark_low
 "colorscheme onedark
 "autocmd ColorScheme * highlight Normal ctermbg=None
 "autocmd ColorScheme * highlight NonText ctermbg=None
@@ -165,6 +165,8 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " 自動的にquickfix-windowを開く
 autocmd QuickFixCmdPost *grep* cwindow
 
+" Mouse
+set mouse=a
 
 " UNDOを保存
 set undofile

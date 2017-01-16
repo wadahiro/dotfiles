@@ -36,3 +36,6 @@ repo = 'haya14busa/incsearch.vim'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
+[[plugins]]
+repo = 'christoomey/vim-tmux-navigator'
+
