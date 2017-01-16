@@ -45,3 +45,6 @@ repo = 'vim-scripts/diffchar.vim'
 [[plugins]]
 repo = 'fatih/vim-go'
 
+[[plugins]]
+repo = 'Shougo/neocomplete.vim'
+

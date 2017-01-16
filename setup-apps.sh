@@ -38,6 +38,7 @@ pacman -S jdk6 jdk7-openjdk jdk8-openjdk
 pacman -S nodejs npm
 pacman -S go
 pacman -S rustup
+pacman -S lua
 
 # Utilities
 pacman -S unzip
