@@ -7,3 +7,8 @@
 	email = wadahiro@gmail.com
 [core]
 	editor = vim
+[diff]
+	tool = vimdiff
+  algorithm = histogram
+[tig "bind"]
+  generic = D !git difftool --tool=vimdiff --no-prompt --trust-exit-code %(commit)^!

@@ -39,3 +39,6 @@ repo = 'tpope/vim-fugitive'
 [[plugins]]
 repo = 'christoomey/vim-tmux-navigator'
 
+[[plugins]]
+repo = 'vim-scripts/diffchar.vim'
+
