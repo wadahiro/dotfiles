@@ -46,6 +46,8 @@ pacman -S xsel
 pacman -S feh
 pacman -S imwheel
 pacman -S powerline python-powerline
+yaourt -S peco
+yaourt -S ghq
 
 # Japanese
 pacman -S fcitx-im fcitx-configtool fcitx-mozc
