@@ -166,7 +166,7 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 autocmd QuickFixCmdPost *grep* cwindow
 
 " Mouse
-set mouse=a
+"set mouse=a
 
 " ESC キーを押してから挿入モードを出るまでの時間を短くする
 " timeoutlen ではなく ttimeoutlen の値を小さくする
@@ -232,3 +232,7 @@ if !exists('g:neocomplete#omni_patterns')
 endif
 let g:neocomplete#omni_patterns.go = '\h\w*\.\?'
 set completeopt-=preview
+
+" typescript
+"let g:tsuquyomi_completion_detail = 1
+
