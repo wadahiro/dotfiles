@@ -82,7 +82,8 @@ pacman -S docker
 systemctl enable docker
 systemctl
 pacman -S visual-studio-code-insiders
-pacman -S eclim eclipse-java
+pacman -S eclipse-java
+#pacman -S eclim
 pacman -S maven
 yaourt -S yarn
 
