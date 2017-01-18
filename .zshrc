@@ -71,3 +71,10 @@ if [[ ! -n $TMUX ]]; then
     :  # Start terminal normally
   fi
 fi
+
+
+# http://hogem.hatenablog.com/entry/20090411/1239451878
+# Ctrl+s
+stty stop undef
+# Ctrl+q
+stty start undef

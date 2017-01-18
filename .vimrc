@@ -187,11 +187,10 @@ if has("autocmd")
     \ endif
 endif
 
-
+" キーバインドカスタマイズ
 " Mark
 "nmap <silent> <A-Left> <C-o>
 "nmap <silent> <A-Right> <C-i>
-
 
 " 数字のインクリメント・デクリメントのマッピングを変更
 nnoremap + <C-a>
@@ -209,10 +208,17 @@ noremap <C-a> <Esc>^
 " 全選択
 noremap <S-a> <Esc>ggVG
 
+" 保存,閉じる
+inoremap <C-s> <Esc>:w<CR>i
+inoremap <C-q> <Esc>:qall<CR>
+nnoremap <C-q> :qall<CR>
+nnoremap <C-s> :w<CR>
+
 "nnoremap <silent> gg :call comfortable_motion#flick(-1000)<CR>
 "nnoremap <silent> G :call comfortable_motion#flick(1000)<CR>
 "nnoremap <silent> { :call comfortable_motion#flick(-400)<CR>
 "nnoremap <silent> } :call comfortable_motion#flick(400)<CR>
+
 
 " EasyMotion
 nmap s <Plug>(easymotion-overwin-f2)
