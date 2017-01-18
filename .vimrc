@@ -236,3 +236,31 @@ set completeopt-=preview
 " typescript
 "let g:tsuquyomi_completion_detail = 1
 
+
+" runner を vimproc に設定
+" 更新時間も設定しておく
+let g:quickrun_config = {
+\   "_" : {
+\       'outputter' : 'error',
+\       'outputter/error/success' : 'quickfix',
+\       'outputter/error/error'   : 'quickfix',
+\       'outputter/buffer/close_on_empty' : 1,
+\       "hook/close_buffer/enable_empty_data" : 1,
+\       "runner" : "vimproc",
+\       "runner/vimproc/updatetime" : 40,
+\   }
+\}
+
+"" quickrunにgo buildを登録
+"let g:quickrun_config["gobuild"] = {
+"\   'command': 'go',
+"\   'cmdopt' : './...',
+"\   'exec': '%c build %o',
+"\   "errorformat": '%f:%l: %m,%-G%.%#',
+"\}
+
+"" *.goファイルを保存したら非同期にgo buildを実行
+"autocmd BufWritePost *.go :QuickRun gobuild
+
+" watchdogs
+call watchdogs#setup(g:quickrun_config)
