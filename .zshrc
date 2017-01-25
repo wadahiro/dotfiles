@@ -20,6 +20,7 @@ alias sudo='sudo -E'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
+export EDITOR='vim'
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 

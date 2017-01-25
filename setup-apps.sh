@@ -73,6 +73,8 @@ pacman -S vim
 
 # Tmux
 pacman -S tmux
+yaourt -S tmuxinator
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Browser
 pacman -S google-chrome-beta
