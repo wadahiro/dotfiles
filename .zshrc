@@ -12,7 +12,7 @@ fi
 
 # Customize to your needs...
 
-. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
+# /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 alias vi='vim'
 alias sudo='sudo -E'
@@ -20,7 +20,8 @@ alias sudo='sudo -E'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
-export EDITOR='vim'
+export EDITOR=vim
+export VISUAL=vim
 export GOPATH=$HOME
 export PATH=$PATH:$GOPATH/bin
 

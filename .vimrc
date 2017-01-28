@@ -67,9 +67,9 @@ end
 " 但し Colorscheme イベントの発生が抑制されないよう nested を付ける。
 "au MyAutoCmd VimEnter * nested colorscheme tender
 "colorscheme tender
-colorscheme OceanicNext
+"colorscheme OceanicNext
 "colorscheme solarized8_dark_low
-"colorscheme onedark
+colorscheme onedark
 "autocmd ColorScheme * highlight Normal ctermbg=None
 "autocmd ColorScheme * highlight NonText ctermbg=None
 syntax enable
