@@ -15,7 +15,8 @@ fi
 # /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 alias vi='vim'
-alias sudo='sudo -E'
+# Need blank for alias
+alias sudo='sudo -E '
 #alias docker='sudo docker'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
