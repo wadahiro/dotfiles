@@ -24,8 +24,8 @@ depends = ['vim-airline-themes']
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
-#[[plugins]]
-#repo = 'yuttie/comfortable-motion.vim'
+[[plugins]]
+repo = 'yuttie/comfortable-motion.vim'
 
 [[plugins]]
 repo = 'Lokaltog/vim-easymotion'

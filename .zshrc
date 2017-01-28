@@ -12,7 +12,7 @@ fi
 
 # Customize to your needs...
 
-#. /usr/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
+. /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 alias vi='vim'
 alias sudo='sudo -E'

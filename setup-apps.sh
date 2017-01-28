@@ -9,6 +9,9 @@ pacman -S i3-wm i3status dmenu rofi compton lxappearance
 pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 #pacman -S networkmanager network-manager-applet gnome-keyring wpa_supplicant
 
+# For intel video card
+sudo pacman -S xf86-video-intel
+
 systemctl enable lightdm
 
 # VirtualBox guest
@@ -41,6 +44,7 @@ pacman -S rustup
 pacman -S lua
 
 # Utilities
+sudo pacman -S ntp
 pacman -S unzip
 pacman -S copyq
 pacman -S xsel
@@ -49,6 +53,8 @@ pacman -S imwheel
 pacman -S powerline python-powerline
 yaourt -S peco
 yaourt -S ghq
+yaourt -S libqalculate
+
 
 # Japanese
 pacman -S fcitx-im fcitx-configtool fcitx-mozc
@@ -66,7 +72,13 @@ pacman -S ttf-dejavu ttf-hack otf-ipafont powerline-fonts
 yaourt -S otf-source-han-code-jp
 
 # Zsh
-pacman -S prezto zsh
+sudo pacman -S zsh
+git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+setopt EXTENDED_GLOB
+for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+done
+chsh -s /bin/zsh
 
 # Vim
 pacman -S vim
@@ -77,13 +89,13 @@ yaourt -S tmuxinator
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # Browser
-pacman -S google-chrome-beta
+yaourt -S google-chrome-beta
 
 # Dev tools
 pacman -S docker
 systemctl enable docker
 systemctl
-pacman -S visual-studio-code-insiders
+#yaourt -S visual-studio-code-insiders
 pacman -S eclipse-java
 #pacman -S eclim
 pacman -S maven
