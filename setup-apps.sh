@@ -92,7 +92,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 yaourt -S google-chrome-beta
 
 # Dev tools
-pacman -S docker
+sudo pacman -S docker
+sudo gpasswd -a $USER docker
 systemctl enable docker
 systemctl
 #yaourt -S visual-studio-code-insiders
@@ -100,4 +101,9 @@ pacman -S eclipse-java
 #pacman -S eclim
 pacman -S maven
 yaourt -S yarn
+
+# Virtual Box
+sudo pacman -S virtualbox
+sudo gpasswd -a $USER vboxusers
+modprobe vboxdrv
 
