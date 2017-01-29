@@ -46,6 +46,7 @@ pacman -S lua
 # Utilities
 sudo pacman -S ntp
 pacman -S unzip
+sudo pacman -S p7zip
 #sudo pacman -S copyq
 curl https://raw.githubusercontent.com/erebe/greenclip/master/greenclip > $HOME/bin/greenclip
 pacman -S xsel
