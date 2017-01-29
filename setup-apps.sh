@@ -58,7 +58,11 @@ yaourt -S libqalculate
 
 # Sound
 sudo pacman -S alsa-utils
-
+#sudo cat <<EOF > /etc/modprobe.d/alsa-base.conf
+## https://wiki.archlinuxjp.org/index.php/Dell_XPS_13_(9333) 
+#options snd_hda_intel index=0 vid=8086 pid=0a0c
+#options snd_hda_intel index=1 vid=8086 pid=9c20
+#EOF
 
 # Japanese
 pacman -S fcitx-im fcitx-configtool fcitx-mozc
@@ -85,7 +89,8 @@ done
 chsh -s /bin/zsh
 
 # Vim
-pacman -S vim
+# The gvim provides also the CLI version of Vim with the +clipboard feature.
+sudo pacman -S gvim
 mkdir -p ~/.cache/vim-undo
 
 # Tmux
