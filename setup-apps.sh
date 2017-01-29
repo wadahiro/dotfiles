@@ -56,6 +56,9 @@ yaourt -S peco
 yaourt -S ghq
 yaourt -S libqalculate
 
+# Sound
+sudo pacman -S alsa-utils
+
 
 # Japanese
 pacman -S fcitx-im fcitx-configtool fcitx-mozc
@@ -83,6 +86,7 @@ chsh -s /bin/zsh
 
 # Vim
 pacman -S vim
+mkdir -p ~/.cache/vim-undo
 
 # Tmux
 pacman -S tmux
