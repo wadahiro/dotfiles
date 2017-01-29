@@ -113,7 +113,8 @@ pacman -S maven
 yaourt -S yarn
 
 # Virtual Box
-sudo pacman -S virtualbox
+sudo pacman -S virtualbox virtualbox-guest-iso 
+yaourt -S virtualbox-ext-oracle
 sudo gpasswd -a $USER vboxusers
 modprobe vboxdrv
 
