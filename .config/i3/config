@@ -162,13 +162,18 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Clipboard manager
-bindsym Mod1+c exec ~/bin/rofi_clipboard_launch.sh
+#bindsym Mod1+c exec ~/bin/rofi_clipboard_launch.sh
 
+# Hide title bar
+for_window [class="^.*"] border pixel 1
+new_window 1pixel
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
         status_command i3status
+        #i3bar_command ~/.i3/lemonbar/i3_lemonbar.py
+        #output eDP1
         position top
         # font pango:DejaVu Sans 14px
         font pango:Hack 14px
@@ -178,9 +183,14 @@ bindsym $mod+p exec ~/bin/rofi_launch.sh
 
 exec --no-startup-id compton
 exec --no-startup-id fcitx
-exec --no-startup-id ~/bin/greenclip daemon
-exec --no-startup-id feh --bg-scale -randomize ~/.wallpaper/*
+#exec --no-startup-id ~/bin/greenclip daemon
+exec --no-startup-id parcellite
 exec --no-startup-id imwheel
+
+#exec xrandr --output HDMI2 --mode 1920x1200 --right-of eDP1
+#exec xrandr --output DP1 --mode 1920x1200 --right-of HDMI2
+exec --no-startup-id feh --bg-scale -randomize ~/.wallpaper/*
+#exec --no-startup-id feh --bg-scale ~/.wallpaper/windows.png
 
 #for_window [window_role="(?i)pop-up"] floating enable
 

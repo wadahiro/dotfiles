@@ -81,3 +81,4 @@ fi
 stty stop undef
 # Ctrl+q
 stty start undef
+source /usr/share/nvm/init-nvm.sh

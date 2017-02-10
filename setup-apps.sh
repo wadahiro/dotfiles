@@ -8,6 +8,9 @@ pacman -S xorg-server xorg-server-utils xorg-xinit xorg-xclock xterm
 pacman -S i3-wm i3status dmenu rofi compton lxappearance
 pacman -S lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 #pacman -S networkmanager network-manager-applet gnome-keyring wpa_supplicant
+yaourt -S lemonbaar
+pip install i3ipc
+mkdir ~/.i3/lemonbar && git clone https://github.com/mirekys/i3-lemonbar.git ~/.i3/lemonbar
 
 # For intel video card
 sudo pacman -S xf86-video-intel
@@ -37,7 +40,8 @@ pacman -S tig
 
 # Languages
 pacman -S python python-pip python2
-pacman -S jdk6 jdk7-openjdk jdk8-openjdk
+pacman -S jdk7-openjdk jdk8-openjdk
+yaourt -S jdk6
 pacman -S nodejs npm
 pacman -S go
 pacman -S rustup
@@ -49,10 +53,12 @@ pacman -S unzip
 sudo pacman -S p7zip
 #sudo pacman -S copyq
 curl https://raw.githubusercontent.com/erebe/greenclip/master/greenclip > $HOME/bin/greenclip
+sudo pacman -S parcellite
 pacman -S xsel
 pacman -S feh
 pacman -S imwheel
 pacman -S powerline python-powerline
+sudo pacman -S colordiff
 yaourt -S peco
 yaourt -S ghq
 yaourt -S libqalculate
@@ -111,6 +117,7 @@ systemctl
 pacman -S eclipse-java
 #pacman -S eclim
 pacman -S maven
+sudo pacman -S apache-ant
 yaourt -S yarn
 
 # Virtual Box

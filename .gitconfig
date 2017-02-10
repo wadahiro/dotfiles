@@ -7,6 +7,7 @@
 	email = wadahiro@gmail.com
 [core]
 	editor = vim
+	autocrlf = false
 [diff]
 	tool = vimdiff
   algorithm = histogram
