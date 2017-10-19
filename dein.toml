@@ -71,3 +71,6 @@ repo = 'osyo-manga/shabadou.vim'
 [[plugins]]
 repo = 'osyo-manga/vim-watchdogs'
 
+[[plugins]]
+repo = 'tyru/caw.vim.git'
+

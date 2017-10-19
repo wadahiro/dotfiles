@@ -118,7 +118,8 @@ nnoremap j gj
 nnoremap k gk
 " 長い行の表示
 set display=lastline
-
+" 折り返しの表示
+" set showbreak=↪
 
 " Tab系
 " 不可視文字を可視化(タブが「▸-」と表示される)
@@ -213,6 +214,19 @@ inoremap <C-s> <Esc>:w<CR>i
 inoremap <C-q> <Esc>:qall<CR>
 nnoremap <C-q> :qall<CR>
 nnoremap <C-s> :w<CR>
+
+" caw
+nmap <C-K> <Plug>(caw:hatpos:toggle)
+vmap <C-K> <Plug>(caw:hatpos:toggle)
+
+" ESCでIMEをOFF
+function! Fcitx2en()
+ let s:input_status = system("fcitx-remote")
+ if s:input_status == 2
+    let l:a = system("fcitx-remote -c")
+ endif
+endfunction
+autocmd InsertLeave * call Fcitx2en()
 
 "nnoremap <silent> gg :call comfortable_motion#flick(-1000)<CR>
 "nnoremap <silent> G :call comfortable_motion#flick(1000)<CR>
