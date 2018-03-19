@@ -24,8 +24,8 @@ depends = ['vim-airline-themes']
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
-[[plugins]]
-repo = 'yuttie/comfortable-motion.vim'
+#[[plugins]]
+#repo = 'yuttie/comfortable-motion.vim'
 
 [[plugins]]
 repo = 'Lokaltog/vim-easymotion'
@@ -52,8 +52,8 @@ repo = 'Shougo/neocomplete.vim'
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
+#[[plugins]]
+#repo = 'leafgarland/typescript-vim'
 #repo = 'HerringtonDarkholme/yats.vim'
 
 #[[plugins]]
@@ -73,4 +73,7 @@ repo = 'osyo-manga/vim-watchdogs'
 
 [[plugins]]
 repo = 'tyru/caw.vim.git'
+
+[[plugins]]
+repo = 'rhysd/clever-f.vim'
 
