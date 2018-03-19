@@ -8,8 +8,11 @@
 [core]
 	editor = vim
 	autocrlf = false
+	quotepath = false
 [diff]
 	tool = vimdiff
   algorithm = histogram
 [tig "bind"]
   generic = D !git difftool --tool=vimdiff --no-prompt --trust-exit-code %(commit)^!
+[credential]
+	helper = cache --timeout=360000000
