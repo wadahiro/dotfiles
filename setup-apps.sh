@@ -21,8 +21,8 @@ systemctl enable lightdm
 pacman -S virtualbox-guest-utils
 
 # Filer
-pacman -S spacefm
-pacman -S numix-themes
+yaourt -S spacefm
+yaourt -S numix-themes
 yaourt -S numix-icon-theme-git
 
 # Terminal
@@ -113,7 +113,8 @@ sudo pacman -S docker
 sudo gpasswd -a $USER docker
 systemctl enable docker
 systemctl
-#yaourt -S visual-studio-code-insiders
+# Need to set 'Defaults keep_env += "http_proxy https_proxy no_proxy"' by visudo.
+yaourt --m-arg "--skipchecksums" -S visual-studio-code-insiders
 pacman -S eclipse-java
 #pacman -S eclim
 pacman -S maven
