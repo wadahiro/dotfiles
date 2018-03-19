@@ -181,7 +181,7 @@ bar {
 
 bindsym $mod+p exec ~/bin/rofi_launch.sh
 
-exec --no-startup-id compton
+#exec --no-startup-id compton
 exec --no-startup-id fcitx
 #exec --no-startup-id ~/bin/greenclip daemon
 exec --no-startup-id parcellite
