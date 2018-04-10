@@ -23,6 +23,13 @@ if dein#load_state(s:dein_dir)
   call dein#load_toml(s:toml_file)
   call dein#end()
   call dein#save_state()
+
+  call dein#add('Shougo/deoplete.nvim')
+  if !has('nvim')
+      call dein#add('roxma/nvim-yarp')
+      call dein#add('roxma/vim-hug-neovim-rpc')
+  endif
+  let g:deoplete#enable_at_startup = 1
 endif
 " 不足プラグインの自動インストール
 if has('vim_starting') && dein#check_install()
@@ -74,6 +81,8 @@ colorscheme onedark
 "autocmd ColorScheme * highlight NonText ctermbg=None
 syntax enable
 
+" 補完系
+set completeopt=menuone,noinsert
  
 "文字コードをUFT-8に設定
 set fenc=utf-8
@@ -241,17 +250,6 @@ let g:EasyMotion_do_mapping = 0
 map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
-
-" neocomplete
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-
-if !exists('g:neocomplete#omni_patterns')
-  let g:neocomplete#omni_patterns = {}
-endif
-let g:neocomplete#omni_patterns.go = '\h\w*\.\?'
-set completeopt-=preview
 
 " typescript
 "let g:tsuquyomi_completion_detail = 1
