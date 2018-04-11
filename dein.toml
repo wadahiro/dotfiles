@@ -24,11 +24,11 @@ depends = ['vim-airline-themes']
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
-#[[plugins]]
+[[plugins]]
 repo = 'yuttie/comfortable-motion.vim'
 
-#[[plugins]]
-#repo = 'Lokaltog/vim-easymotion'
+[[plugins]]
+repo = 'Lokaltog/vim-easymotion'
 
 [[plugins]]
 repo = 'haya14busa/incsearch.vim'
@@ -52,6 +52,10 @@ repo = 'Shougo/neocomplete.vim'
 repo = 'Shougo/vimproc.vim'
 build = 'make'
 
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+hook_add = 'let g:deoplete#enable_at_startup = 1'
+
 #[[plugins]]
 #repo = 'leafgarland/typescript-vim'
 #repo = 'HerringtonDarkholme/yats.vim'
@@ -59,8 +63,14 @@ build = 'make'
 #[[plugins]]
 #repo = 'Quramy/tsuquyomi'
 
+#[[plugins]]
+#repo = 'ctrlpvim/ctrlp.vim'
+
 [[plugins]]
-repo = 'ctrlpvim/ctrlp.vim'
+repo = '~/.fzf'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
@@ -77,3 +87,6 @@ repo = 'tyru/caw.vim.git'
 [[plugins]]
 repo = 'rhysd/clever-f.vim'
 
+[[plugins]]
+repo = 'zchee/deoplete-go'
+build = 'make'

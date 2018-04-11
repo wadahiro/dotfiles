@@ -82,8 +82,18 @@ colorscheme onedark
 syntax enable
 
 " 補完系
-set completeopt=menuone,noinsert
- 
+set completeopt=menuone,noinsert,noselect
+ " Path to python interpreter for neovim
+let g:python3_host_prog  = '/usr/bin/python3'
+" Skip the check of neovim module
+let g:python3_host_skip_check = 1
+
+" Run deoplete.nvim automatically
+let g:deoplete#enable_at_startup = 1
+" deoplete-go settings
+let g:deoplete#sources#go#gocode_binary = $GOPATH.'/bin/gocode'
+let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const']
+
 "文字コードをUFT-8に設定
 set fenc=utf-8
 " バックアップファイルを作らない
@@ -174,6 +184,13 @@ set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 " 自動的にquickfix-windowを開く
 autocmd QuickFixCmdPost *grep* cwindow
+
+" User fzf instead of ctrlp.vim
+nnoremap <C-p> :FZFFileList<CR>
+command! FZFFileList call fzf#run({
+            \ 'source': 'find . -type d -name .git -prune -o ! -name .DS_Store',
+            \ 'sink': 'e'})
+
 
 " Mouse
 "set mouse=a
