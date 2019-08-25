@@ -1,0 +1,15 @@
+ARG BASE_VERSION
+FROM wadahiro/docker-guidev-base:$BASE_VERSION
+
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y software-properties-common \
+    && add-apt-repository -y ppa://kgilmer/regolith-stable \
+    && apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+      lxde \
+    && apt-get clean \
+    && rm -rf /var/cache/apt/archives/* \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN echo "startlxde" > /etc/skel/.xsession
+
