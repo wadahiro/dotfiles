@@ -1,7 +1,7 @@
 [url "https://"]
 	insteadOf = git://
 [ghq]
-	root = ~/src
+	root = ~/dev/src
 [user]
 	name = Hiroyuki Wada
 	email = wadahiro@gmail.com
