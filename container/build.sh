@@ -1,12 +1,22 @@
-#!/bin/sh
+#!/bin/bash -e
 
 VERSION=ubuntu19.04
+IMAGE_PREFIX=wadahiro/desktop
 
-docker build -f Dockerfile.base . -t wadahiro/docker-guidev-base:$VERSION
-docker build -f Dockerfile.base.ja . -t wadahiro/docker-guidev-base:${VERSION}_ja
+# Base
+docker build -f Dockerfile.base . -t ${IMAGE_PREFIX}-base:$VERSION
 
-docker build -f Dockerfile.i3wm --build-arg BASE_VERSION=$VERSION . -t wadahiro/docker-guidev-i3wm:$VERSION
-docker build -f Dockerfile.i3wm --build-arg BASE_VERSION=${VERSION}_ja . -t wadahiro/docker-guidev-i3wm:${VERSION}_ja
 
-docker build -f Dockerfile.lxde --build-arg BASE_VERSION=$VERSION . -t wadahiro/docker-guidev-lxde:$VERSION
-docker build -f Dockerfile.lxde --build-arg BASE_VERSION=${VERSION}_ja . -t wadahiro/docker-guidev-lxde:${VERSION}_ja
+# Window Manager
+WINDOW_MANAGERS=(regolith lxde)
+LANGUAGES=(ja)
+for WM in ${WINDOW_MANAGERS[@]}; do
+    docker build -f Dockerfile.${WM} --build-arg BASE_IMAGE=${IMAGE_PREFIX}-base:${VERSION} . -t ${IMAGE_PREFIX}-${WM}:${VERSION}
+
+    # Language
+    for LANGUAGE in ${LANGUAGES[@]}; do
+	echo $LANGUAGE
+#        docker build -f Dockerfile.${LANGUAGE} --build-arg BASE_IMAGE=${IMAGE_PREFIX}-${WM}:${VERSION} . -t ${IMAGE_PREFIX}-${WM}:${VERSION}_${LANGUAGE}
+    done
+done
+

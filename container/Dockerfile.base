@@ -11,10 +11,6 @@ RUN apt-get update \
     && rm -rf /var/cache/apt/archives/* \
     && rm -rf /var/lib/apt/lists/*
 
-# Set locale
-RUN cp /usr/share/zoneinfo/Asia/Tokyo /etc/localtime \
-    && echo 'Asia/Tokyo' > /etc/timezone
-
 # Set default vars
 ENV DEFAULT_USER=developer \
     DEFAULT_PASSWD=xrdppasswd
