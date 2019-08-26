@@ -1,8 +1,10 @@
 bin
-.config
 dev
+.config/dconf
+.config/regolith/flags
 .local
 .Xauthority
 .dbus
 .xorgxrdp.*
 .xsession-errors
+workspace
