@@ -36,6 +36,9 @@ if (( $# == 0 )); then
     echo "PASSWD: $PASSWD"
     echo ${USER}:${PASSWD} | sudo chpasswd
 
+    # Docker
+    sudo usermod -aG docker $USER
+
     [[ ! -e ${HOME}/.xsession ]] && \
         cp /etc/skel/.xsession ${HOME}/.xsession
     [[ ! -e /etc/xrdp/rsakeys.ini ]] && \

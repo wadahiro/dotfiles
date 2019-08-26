@@ -19,12 +19,25 @@ RUN curl https://dl.google.com/linux/linux_signing_key.pub | apt-key add - \
     && rm -rf /var/cache/apt/archives/* \
     && rm -rf /var/lib/apt/lists/*
 
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - \
+    && add-apt-repository \
+      "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+      $(lsb_release -cs) \
+      stable" \
+    && apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+      docker-ce \
+    && apt-get clean \
+    && rm -rf /var/cache/apt/archives/* \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN apt-add-repository ppa:fish-shell/release-3 \
     && apt-get update \
     && apt-get install -y \
       git \
       fish \
       fzf \
+      psmisc \
     && apt-get clean \
     && rm -rf /var/cache/apt/archives/* \
     && rm -rf /var/lib/apt/lists/*
