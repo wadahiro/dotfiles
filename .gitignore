@@ -9,4 +9,5 @@ dev
 .xorgxrdp.*
 .xsession-errors
 .bash_history
+tmux-*.log
 workspace

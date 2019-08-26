@@ -47,3 +47,18 @@ RUN mkdir /tmp/tools && cd /tmp/tools \
     && unzip *.zip \
     && sudo mv ghq_*/ghq /usr/local/bin/ \
     && cd /tmp && rm -rf /tmp/tools
+
+RUN apt-get update \
+    && apt-get install -y \
+      python-pip \
+    && pip install powerline-status --system \
+    && apt-get clean \
+    && rm -rf /var/cache/apt/archives/* \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get update \
+    && apt-get install -y \
+      xsel \
+    && apt-get clean \
+    && rm -rf /var/cache/apt/archives/* \
+    && rm -rf /var/lib/apt/lists/*
