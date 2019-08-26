@@ -29,6 +29,7 @@ workspace
 .pki
 .presage
 .python_history
+.tig_history
 .Xauthority
 .xinputrc
 .xorgxrdp.*
