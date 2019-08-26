@@ -1,0 +1,1 @@
+/home/h2-wada/.vimrc
