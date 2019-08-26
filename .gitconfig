@@ -1,7 +1,7 @@
 [url "https://"]
 	insteadOf = git://
 [ghq]
-	root = ~/dev/src
+	root = ~/workspace/dev/src
 [user]
 	name = Hiroyuki Wada
 	email = wadahiro@gmail.com
@@ -11,8 +11,8 @@
 	quotepath = false
 [diff]
 	tool = vimdiff
-  algorithm = histogram
+	algorithm = histogram
 [tig "bind"]
-  generic = D !git difftool --tool=vimdiff --no-prompt --trust-exit-code %(commit)^!
+	generic = D !git difftool --tool=vimdiff --no-prompt --trust-exit-code %(commit)^!
 [credential]
 	helper = cache --timeout=360000000
