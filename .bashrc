@@ -115,3 +115,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US:en
+export LC_ALL=ja_JP.UTF-8
+

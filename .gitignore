@@ -1,5 +1,6 @@
 bin
 dev
+.cache
 .config/dconf
 .config/regolith/flags
 .local
@@ -7,4 +8,5 @@ dev
 .dbus
 .xorgxrdp.*
 .xsession-errors
+.bash_history
 workspace

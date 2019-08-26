@@ -25,3 +25,6 @@ fi
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
+
+#export LANG=ja_JP.UTF-8
+#export LC_ALL=ja_JP.UTF-8
