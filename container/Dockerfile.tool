@@ -82,3 +82,4 @@ RUN mkdir /tmp/ide && cd /tmp/ide \
     && tar -xzf *.tar.gz -C /opt \
     && cd /tmp && rm -rf /tmp/ide
 
+ADD xrdp_keyboard.ini /etc/xrdp/
