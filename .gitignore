@@ -1,11 +1,15 @@
 bin
 dev
 workspace
+Downloads
+go
 .ICEauthority
+.IdeaIC*
 .anyenv
 .bash_history
 .cache
 .config/anyenv
+.config/Code
 .config/dconf
 .config/enchant
 .config/evolution
@@ -23,7 +27,9 @@ workspace
 .config/user-dirs.locale
 .dbus
 .gnome
+.java
 .local
+.m2
 .mozc
 .mozilla
 .pki
@@ -34,5 +40,6 @@ workspace
 .xinputrc
 .xorgxrdp.*
 .xsession-errors
+.vscode
 tmux-*.log
 
