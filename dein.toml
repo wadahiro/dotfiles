@@ -24,8 +24,8 @@ depends = ['vim-airline-themes']
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
 
-[[plugins]]
-repo = 'yuttie/comfortable-motion.vim'
+# [[plugins]]
+# repo = 'yuttie/comfortable-motion.vim'
 
 [[plugins]]
 repo = 'Lokaltog/vim-easymotion'
@@ -66,11 +66,11 @@ hook_add = 'let g:deoplete#enable_at_startup = 1'
 #[[plugins]]
 #repo = 'ctrlpvim/ctrlp.vim'
 
-[[plugins]]
-repo = '~/.fzf'
-
-[[plugins]]
-repo = 'junegunn/fzf.vim'
+# [[plugins]]
+# repo = '~/.fzf'
+#
+# [[plugins]]
+# repo = 'junegunn/fzf.vim'
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'

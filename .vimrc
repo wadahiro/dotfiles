@@ -84,7 +84,7 @@ syntax enable
 " 補完系
 set completeopt=menuone,noinsert,noselect
  " Path to python interpreter for neovim
-let g:python3_host_prog  = '/usr/bin/python3'
+let g:python3_host_prog  = '/usr/local/bin/python3'
 " Skip the check of neovim module
 let g:python3_host_skip_check = 1
 
@@ -106,8 +106,7 @@ set autoread
 set hidden
 " 入力中のコマンドをステータスに表示する
 set showcmd
-set clipboard&
-set clipboard^=unnamedplus
+set clipboard+=unnamed
 filetype plugin indent on
 
 

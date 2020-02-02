@@ -6,7 +6,7 @@
     name = Hiroyuki Wada
     email = wadahiro@gmail.com
 [core]
-    editor = nvim
+    editor = vi
     autocrlf = false
     quotepath = false
 [diff]
