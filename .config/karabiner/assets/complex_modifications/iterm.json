@@ -1,13 +1,13 @@
 {
-    "title": "caps_lock settings",
+    "title": "Terminal settings",
     "rules": [
         {
-            "description": "caps_lock to left_command(unless Terminal)",
+            "description": "left_control to left_command(without Terminal/IntelliJ)",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "caps_lock",
+                        "key_code": "left_control",
                         "modifiers": {
                             "optional": [
                                 "any"
@@ -32,25 +32,39 @@
             ]
         },
         {
-            "description": "caps_lock to left_control(only Terminal)",
+            "description": "opt+ctrl+tab to opt+cmd+tab(Terminal/IntelliJ only)",
             "manipulators": [
                 {
                     "type": "basic",
                     "from": {
-                        "key_code": "caps_lock",
+                        "key_code": "tab",
                         "modifiers": {
+                            "mandatory": [
+                                "option",
+                                "control"
+                            ],
                             "optional": [
-                                "any"
+                                "shift"
                             ]
                         }
                     },
                     "to": [
                         {
-                            "key_code": "left_control"
+                            "key_code": "tab",
+                            "modifiers": ["option", "command"]
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.googlecode\\.iterm2",
+                                "^io\\.alacritty"
+                            ]
                         }
                     ]
                 }
             ]
-        }
+        }        
     ]
 }

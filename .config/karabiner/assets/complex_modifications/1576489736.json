@@ -1,5 +1,5 @@
 {
-  "title": "Change control and Fn + letter keys to command and control keys",
+  "title": "Change left_control + CXVZA to left_comman + CXVZA(Unless iterm2)",
   "rules": [
     {
       "description": "Change left_control + CXV to left_command + CXV",
@@ -24,6 +24,14 @@
                 "left_command"
               ]
             }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.googlecode\\.iterm2"
+              ]
+            }
           ]
         },
         {
@@ -44,6 +52,14 @@
               "key_code": "s",
               "modifiers": [
                 "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.googlecode\\.iterm2"
               ]
             }
           ]
@@ -68,6 +84,14 @@
                 "left_command"
               ]
             }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.googlecode\\.iterm2"
+              ]
+            }
           ]
         },
         {
@@ -88,6 +112,14 @@
               "key_code": "c",
               "modifiers": [
                 "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.googlecode\\.iterm2"
               ]
             }
           ]
@@ -112,6 +144,14 @@
                 "left_command"
               ]
             }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.googlecode\\.iterm2"
+              ]
+            }
           ]
         },
         {
@@ -134,6 +174,14 @@
                 "left_command"
               ]
             }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.googlecode\\.iterm2"
+              ]
+            }
           ]
         },
         {
@@ -154,6 +202,14 @@
               "key_code": "z",
               "modifiers": [
                 "left_command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "^com\\.googlecode\\.iterm2"
               ]
             }
           ]
