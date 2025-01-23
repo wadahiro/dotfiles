@@ -6,17 +6,26 @@
     name = Hiroyuki Wada
     email = wadahiro@gmail.com
 [core]
-    editor = vi
+    editor = nvim
     autocrlf = false
     quotepath = false
 [diff]
-    tool = meld
+    tool = nvimdiff
     algorithm = histogram
+[difftool "nvimdiff"]
+    cmd = "nvim -R -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
 [difftool "meld"]
     cmd = meld $LOCAL $REMOTE
 [merge]
     tool = meld
+[mergetool "nvimdiff"]
+  cmd = "nvim -d -c \"4wincmd w | wincmd J\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"  \"$MERGED\""
 [tig "bind"]
     generic = D !git difftool --tool=meld --no-prompt --trust-exit-code %(commit)^!
-[credential]
-    helper = cache --timeout=360000000
+[init]
+	defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

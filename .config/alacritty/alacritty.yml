@@ -33,7 +33,7 @@ colors:
 
 # Font
 font:
-  size: 12
+  size: 15 
   normal:
     family: 'Source Code Pro for Powerline'
     style: Regular
@@ -50,4 +50,4 @@ font:
 window:
   decorations: full
   #startup_mode: Fullscreen
-  opacity: 0.85 
+  opacity: 0.80 

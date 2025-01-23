@@ -202,6 +202,8 @@ set ttimeoutlen=0
 set undofile
 set undodir=~/.cache/vim-undo
 
+" 自動改行Off
+set tw=0
 
 """"""""""""""""""""""""""""""
 " 最後のカーソル位置を復元する
