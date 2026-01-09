@@ -121,6 +121,7 @@
                                     {
                                         "bundle_identifiers": [
                                             "^com\\.googlecode\\.iterm2",
+                                            "^com\\.mitchellh\\.ghostty",
                                             "^org\\.alacritty"
                                         ],
                                         "type": "frontmost_application_unless"
@@ -245,7 +246,8 @@
                 }
             ],
             "name": "Default profile",
-            "selected": true
+            "selected": true,
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
 }

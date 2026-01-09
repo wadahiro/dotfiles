@@ -33,7 +33,7 @@ colors:
 
 # Font
 font:
-  size: 15 
+  size: 15
   normal:
     family: 'Source Code Pro for Powerline'
     style: Regular
