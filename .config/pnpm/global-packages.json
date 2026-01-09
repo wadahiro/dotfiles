@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@anthropic-ai/claude-code": "latest",
+    "aws-cdk": "latest",
+    "npm-check-updates": "latest"
+  }
+}
