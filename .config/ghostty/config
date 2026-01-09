@@ -1,0 +1,16 @@
+shell-integration = fish
+
+#theme = xcodedarkhc
+
+font-feature = -calt
+font-feature = -dlig
+
+window-padding-balance = true
+window-theme = ghostty
+
+background-opacity = 0.80
+
+macos-titlebar-style = transparent
+keybind = shift+enter=text:\x1b\r
+
+
