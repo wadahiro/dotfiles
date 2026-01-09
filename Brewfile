@@ -31,6 +31,7 @@ brew "wget"
 brew "httpie"
 brew "coreutils"
 brew "gnu-sed"
+brew "zoxide"
 
 # GUI Applications
 cask "ghostty"
