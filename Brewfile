@@ -41,6 +41,5 @@ brew "koekeishiya/formulae/skhd"
 # GUI Applications
 cask "ghostty"
 cask "karabiner-elements"
-cask "claude-code"
 cask "visual-studio-code"
 cask "intellij-idea-ce"
