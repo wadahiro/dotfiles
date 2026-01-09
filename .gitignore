@@ -1,3 +1,7 @@
 bin
 .DS_Store
 *.bak
+.config/fish/config.local.fish
+.config/fish/fish_variables
+.config/fish/completions/
+.config/fish/functions/
