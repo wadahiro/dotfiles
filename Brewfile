@@ -9,6 +9,7 @@ brew "neovim"
 # Development Tools
 brew "git"
 brew "gh"
+brew "ghq"
 brew "git-delta"
 brew "lazygit"
 brew "tig"
@@ -33,8 +34,13 @@ brew "coreutils"
 brew "gnu-sed"
 brew "zoxide"
 
+# Window Management
+brew "koekeishiya/formulae/yabai"
+brew "koekeishiya/formulae/skhd"
+
 # GUI Applications
 cask "ghostty"
 cask "karabiner-elements"
 cask "claude-code"
 cask "visual-studio-code"
+cask "intellij-idea-ce"
