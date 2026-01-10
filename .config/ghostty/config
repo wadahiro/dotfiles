@@ -2,6 +2,10 @@ shell-integration = fish
 
 #theme = xcodedarkhc
 
+font-family = "Hack Nerd Font Mono"
+font-family = "Hiragino Kaku Gothic ProN"
+font-size = 14
+
 font-feature = -calt
 font-feature = -dlig
 
