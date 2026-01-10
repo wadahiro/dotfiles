@@ -6,7 +6,7 @@ start-at-login = true
 
 # Start JankyBorders with AeroSpace
 after-startup-command = [
-  'exec-and-forget borders active_color=0xffff9944 inactive_color=0xff494d64 width=5.0 hidpi=on'
+  'exec-and-forget borders active_color=0xffff9944 inactive_color=0xff494d64 width=10.0 hidpi=on'
 ]
 
 # Mouse follows focus
