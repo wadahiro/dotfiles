@@ -36,6 +36,7 @@ brew "zoxide"
 
 # Window Management
 cask "nikitabobko/tap/aerospace"
+brew "FelixKratz/formulae/borders"
 
 # GUI Applications
 cask "ghostty"
