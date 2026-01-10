@@ -29,6 +29,10 @@ keybinds clear-defaults=true {
         bind "|" { NewPane "right"; SwitchToMode "normal"; }
         bind "-" { NewPane "down"; SwitchToMode "normal"; }
         bind "c" { NewTab; SwitchToMode "normal"; }
+        bind "f" { TogglePaneEmbedOrFloating; SwitchToMode "normal"; }
+        bind "i" { TogglePanePinned; SwitchToMode "normal"; }
+        bind "w" { ToggleFloatingPanes; SwitchToMode "normal"; }
+        bind "r" { SwitchToMode "resize"; }
 
         bind "n" { GoToNextTab; SwitchToMode "normal"; }
         bind "p" { GoToPreviousTab; SwitchToMode "normal"; }
@@ -195,7 +199,7 @@ keybinds clear-defaults=true {
         //bind "Ctrl b" { SwitchToMode "tmux"; }
     }
     shared_except "locked" "scroll" "search" {
-        bind "Ctrl s" { SwitchToMode "scroll"; }
+        //bind "Ctrl s" { SwitchToMode "scroll"; }
     }
     shared_except "locked" "tab" {
         //bind "Ctrl t" { SwitchToMode "tab"; }
@@ -412,7 +416,7 @@ copy_on_select false
  
 // Path to the default editor to use to edit pane scrollbuffer
 // Default: $EDITOR or $VISUAL
-// scrollback_editor "/usr/bin/vim"
+scrollback_editor "nvim +$"
  
 // A fixed name to always give the Zellij session.
 // Consider also setting `attach_to_session true,`
