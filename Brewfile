@@ -35,8 +35,7 @@ brew "gnu-sed"
 brew "zoxide"
 
 # Window Management
-brew "koekeishiya/formulae/yabai"
-brew "koekeishiya/formulae/skhd"
+cask "nikitabobko/tap/aerospace"
 
 # GUI Applications
 cask "ghostty"
