@@ -6,7 +6,8 @@ set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
 set -x LC_ALL en_JP
 
 # PATH
-set -x PATH $GOPATH/bin $PATH
+set -x PATH $HOME/.local/share/nvim/mason/bin $GOPATH/bin $PATH
+fish_add_path $HOME/Library/pnpm
 
 # Aliases
 alias vi 'nvim'

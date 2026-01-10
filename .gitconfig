@@ -9,13 +9,17 @@
     editor = nvim
     autocrlf = false
     quotepath = false
+    pager = delta
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+    line-numbers = true
+    side-by-side = true
+[merge]
+    conflictstyle = diff3
 [diff]
-    tool = nvimdiff
-    algorithm = histogram
-[difftool "nvimdiff"]
-    cmd = "nvim -R -d -c \"wincmd l\" -d \"$LOCAL\" \"$REMOTE\""
-[difftool "meld"]
-    cmd = meld $LOCAL $REMOTE
+    colorMoved = default
 [merge]
     tool = meld
 [mergetool "nvimdiff"]
