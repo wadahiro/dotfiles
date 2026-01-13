@@ -4,6 +4,11 @@
 
 local opt = vim.opt
 
+-- Encoding
+opt.encoding = "utf-8"
+opt.fileencoding = "utf-8"
+opt.fileencodings = "utf-8,euc-jp,sjis,cp932"
+
 -- Line numbers
 opt.number = true
 
