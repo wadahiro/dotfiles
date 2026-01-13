@@ -3,7 +3,8 @@ set -U FZF_LEGACY_KEYBINDINGS 0
 set -U FZF_REVERSE_ISEARCH_OPTS "--reverse --height=100%"
 
 # Locale
-set -x LC_ALL en_JP
+set -x LC_ALL en_US.UTF-8
+set -x LESSCHARSET utf-8
 
 # PATH
 set -x PATH $HOME/.local/share/nvim/mason/bin $GOPATH/bin $PATH
