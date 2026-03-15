@@ -48,6 +48,9 @@ This script creates symbolic links from the current directory to `$HOME` for con
 - Do not commit unnecessary files
 - Be careful with backup files (`.backup`, etc.)
 - Exclude configuration files containing sensitive information
+- Environment-specific or company-specific settings must be placed in local config files (not tracked in git):
+  - fish: `~/.config/fish/config.local.fish`
+  - git: `~/.config/git/local.gitconfig`
 
 ## Editing Rules
 
@@ -66,5 +69,5 @@ This script creates symbolic links from the current directory to `$HOME` for con
 ## Project Management
 
 - Place tool configurations under the `.config/` directory
-- Delete or clearly archive old configuration files (e.g., `setup-apps.sh`)
+- Delete or clearly archive old configuration files that are no longer needed
 - Regularly review configurations that are no longer in use
