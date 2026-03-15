@@ -2,9 +2,9 @@ shell-integration = fish
 
 #theme = xcodedarkhc
 
-font-family = "Hack Nerd Font Mono"
-font-family = "Hiragino Kaku Gothic ProN"
+font-family = BlexMono Nerd Font Mono
 font-size = 14
+adjust-cell-width = -5%
 
 font-feature = -calt
 font-feature = -dlig

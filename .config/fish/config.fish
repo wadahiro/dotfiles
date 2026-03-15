@@ -10,6 +10,9 @@ set -x LESSCHARSET utf-8
 set -x PATH $HOME/.local/share/nvim/mason/bin $GOPATH/bin $PATH
 fish_add_path $HOME/Library/pnpm
 
+# PNPM
+set -x PNPM_HOME $HOME/Library/pnpm
+
 # Aliases
 alias vi 'nvim'
 alias vim 'nvim'
@@ -20,18 +23,19 @@ alias dbash 'docker exec -it (docker ps --format "table {{.Names}}\t{{.Image}}" 
 # Docker
 set -x DOCKER_BUILDKIT 1
 
-# Zellij auto-start
-if not set -q ZELLIJ
-    if test "$ZELLIJ_AUTO_ATTACH" = "true"
-        zellij attach -c
-    else
-        zellij
-    end
 
-    if test "$ZELLIJ_AUTO_EXIT" = "true"
-        kill $fish_pid
-    end
-end
+# Zellij auto-start
+#if not set -q ZELLIJ
+#    if test "$ZELLIJ_AUTO_ATTACH" = "true"
+#        zellij attach -c
+#    else
+#        zellij
+#    end
+#
+#    if test "$ZELLIJ_AUTO_EXIT" = "true"
+#        kill $fish_pid
+#    end
+#end
 
 # Load local configuration (not tracked in git)
 if test -f ~/.config/fish/config.local.fish

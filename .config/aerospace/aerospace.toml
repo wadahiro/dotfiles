@@ -13,8 +13,8 @@ after-startup-command = [
 # Sync aerotag on workspace change
 exec-on-workspace-change = ['/bin/bash', '-c', 'aerotag hook']
 
-# Mouse follows focus
-on-focus-changed = ['move-mouse window-lazy-center']
+# Mouse follows focus (disabled)
+# on-focus-changed = ['move-mouse window-lazy-center']
 
 # Normalizations
 enable-normalization-flatten-containers = true
