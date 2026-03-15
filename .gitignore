@@ -2,6 +2,7 @@ bin
 .DS_Store
 *.bak
 .config/fish/config.local.fish
+.config/git/local.gitconfig
 .config/fish/fish_variables
 .config/fish/completions/
 .config/fish/functions/

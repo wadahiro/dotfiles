@@ -1,3 +1,5 @@
+[include]
+    path = ~/.config/git/local.gitconfig
 [url "https://"]
     insteadOf = git://
 [ghq]
