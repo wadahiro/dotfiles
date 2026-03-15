@@ -38,6 +38,9 @@ brew "zoxide"
 cask "nikitabobko/tap/aerospace"
 brew "FelixKratz/formulae/borders"
 
+# Fonts
+cask "font-blex-mono-nerd-font"
+
 # GUI Applications
 cask "ghostty"
 cask "karabiner-elements"
