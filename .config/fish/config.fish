@@ -13,6 +13,10 @@ fish_add_path $HOME/Library/pnpm
 # PNPM
 set -x PNPM_HOME $HOME/Library/pnpm
 
+# Override ghq key binding (Ctrl+] instead of default Ctrl+G)
+bind \c] '__ghq_repository_search'
+bind -M insert \c] '__ghq_repository_search' 2>/dev/null
+
 # Aliases
 alias vi 'nvim'
 alias vim 'nvim'
@@ -40,3 +44,4 @@ set -x DOCKER_BUILDKIT 1
 if test -f ~/.config/fish/config.local.fish
     source ~/.config/fish/config.local.fish
 end
+export PATH="$HOME/.local/bin:$PATH"

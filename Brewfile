@@ -44,5 +44,7 @@ cask "font-blex-mono-nerd-font"
 # GUI Applications
 cask "ghostty"
 cask "karabiner-elements"
+cask "google-chrome"
+cask "google-japanese-ime"
 cask "visual-studio-code"
 cask "intellij-idea-ce"
