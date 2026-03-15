@@ -6,3 +6,4 @@ bin
 .config/fish/fish_variables
 .config/fish/completions/
 .config/fish/functions/
+.config/karabiner/automatic_backups/
