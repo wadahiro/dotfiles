@@ -23,7 +23,6 @@ alias dbash 'docker exec -it (docker ps --format "table {{.Names}}\t{{.Image}}" 
 # Docker
 set -x DOCKER_BUILDKIT 1
 
-
 # Zellij auto-start
 #if not set -q ZELLIJ
 #    if test "$ZELLIJ_AUTO_ATTACH" = "true"
