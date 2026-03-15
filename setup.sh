@@ -64,6 +64,11 @@ fi
 if ! nvram StartupMute 2>/dev/null | grep -q '%01'; then
     sudo nvram StartupMute=%01
 fi
+# Disable Spotlight indexing
+if mdutil -s / 2>/dev/null | grep -q 'Indexing enabled'; then
+    sudo mdutil -a -i off
+    sudo mdutil -a -E
+fi
 
 # Finder: show all file extensions
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true

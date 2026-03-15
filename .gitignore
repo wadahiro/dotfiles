@@ -9,3 +9,4 @@ bin
 .config/karabiner/automatic_backups/
 .claude/
 .config/jgit/
+.config/raycast/
