@@ -17,5 +17,14 @@ for f in $(find "$SCRIPT_DIR" -maxdepth 1 -mindepth 1 | awk -F/ '{print $NF}'); 
     [ "$f" = "README.md" ] && continue
     [ "$f" = "CLAUDE.md" ] && continue
 
-    ln -snfv "$SCRIPT_DIR/$f" "$HOME/$f"
+    target="$HOME/$f"
+    if [ -e "$target" ] && [ ! -L "$target" ]; then
+        read -p "$target already exists. Backup and replace? [y/N] " answer
+        if [ "$answer" != "y" ] && [ "$answer" != "Y" ]; then
+            echo "Skipping $f"
+            continue
+        fi
+        mv -v "$target" "$target.backup"
+    fi
+    ln -snfv "$SCRIPT_DIR/$f" "$target"
 done
