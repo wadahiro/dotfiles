@@ -9,13 +9,13 @@ fi
 brew bundle --file="$(cd "$(dirname "$0")" && pwd)/Brewfile"
 
 # Create symbolic links
-pwd=$(cd "$(dirname "$0")" && pwd)
-for f in $(find . -maxdepth 1 -mindepth 1 | awk -F/ '{print $NF}'); do
+SCRIPT_DIR=$(cd "$(dirname "$0")" && pwd)
+for f in $(find "$SCRIPT_DIR" -maxdepth 1 -mindepth 1 | awk -F/ '{print $NF}'); do
     [ "$f" = ".git" ] && continue
     [ "$f" = "setup.sh" ] && continue
     [ "$f" = "Brewfile" ] && continue
     [ "$f" = "README.md" ] && continue
     [ "$f" = "CLAUDE.md" ] && continue
 
-    ln -snfv "$pwd/$f" "$HOME/$f"
+    ln -snfv "$SCRIPT_DIR/$f" "$HOME/$f"
 done
